@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap');
+
+* {
+    font-family: "Lora", sans-serif;
+    box-sizing: border-box;   
+}
+
+
+html,body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #f5e9e3;
+}
+
+li{
+    font-family: "Lora", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color:  	#f5e9e3;
+    background-color: #7987a0;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:5px 5%;
+    background-color: #9eaec5;
+    box-shadow: 0 3px 2px #7987a0;
+    height: 80px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+table td, table th {
+    padding: 7px;
+}
+thead,tbody {
+    text-align: center;
+    padding: 8px;
+}
+
+th{
+    background-color: #7987a0;
+    color: #f5e9e3;
+}
+
+tr:nth-child(even){
+    background-color:#9eaec5
+}
+
+tr:nth-child(odd){
+    background-color: #c8d2e0;
+}
+
+.welcome{
+  padding: 20px;
+  text-align: center;
+  color:  	#7987a0;
+  font-size: 20px;
+}
+
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    background-color: #9eaec5;
+    height: 80px;
+}
+
+.navbar{
+    background-color: #9eaec5;
+    list-style: none;
+}
+
+.navbar a{
+    font-family: "Lora", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color:  	#f5e9e3;
+    background-color: #7987a0;
+    text-decoration: none;
+}
+
+.navbar li{
+    background-color: #9eaec5;
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navbar li a{
+    transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover{
+    color: #7987a0;
+}
+
+.navbar li a.active{
+    color: #7987a0;
+}
+
+.logout-button{
+    font-family: "Lora", sans-serif;
+    font-weight: 600;
+    color:  	#f5e9e3;
+    background-color: #7987a0;
+    text-decoration: none; 
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.logout li a{
+    background-color: #9eaec5;
+}
+
+.logout-button:hover{
+    background-color: #c8d2e0;
+}
+
+.container {
+    padding: 16px;
+}
+
+.container button {
+
+    font-family: "Lora", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color:#f5e9e3;
+    background-color: #7987a0;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+#searchBook {
+    width: 100%;
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    margin-top: 150px;
+}
+
+#searchBook fieldset{
+    border: none;
+    width: 60%;
+    display: flex;
+}
+
+#searchBook .flex-item {
+    display: inline-flex;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+}
+
+#searchBook .flex-item:nth-child(1) {
+    order: 0;
+    flex: 1 1 auto;
+    align-self: auto;
+ }
+
+#success{
+    color: green;
+    padding: 10px;
+    position: fixed;
+    top: 10%;
+    left: auto;
+    border: 1px solid;
+    background: lightgreen;
+}
+
+#failure{
+    color: red;
+    padding: 10px;
+    position: fixed;
+    top: 10%;
+    left: auto;
+    border: 1px solid;
+    background: rgb(247, 159, 159);
+}
+
+.footer {
+    background-color: #9eaec5;
+    color:  	#f5e9e3;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    padding: 10px;
+    position: fixed;
+}
+
+
+.open-button {
+    border-width: 1px;
+    cursor: pointer;
+    justify-content: center;
+    padding-bottom: calc(.5em - 1px);
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: calc(.5em - 1px);
+    text-align: center;
+    white-space: nowrap;
+}
+.control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: inherit;
+}
+.field.has-addons {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container input[type=text], .form-container input[type=number], 
+.form-container textarea, .form-container input[type=url] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+
+.form-container input[type=text]:focus, .form-container input[type=number]:focus,
+.form-container textarea:focus, .form-container input[type=url]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+
+.form-container .btn {
+    background-color:#7987a0 ;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+.form-container .cancel {
+    background-color: #9eaec5;
+}
+
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+
+@media only screen 
+   and (max-width : 370px), (max-width : 768px), (max-width: 1100px) {
+   #searchBook {
+    display: inline-block;
+    margin-top: 50px;
+    
+}
+#searchBook .flex-item,  #searchBook .flex-item:nth-child(1) {
+    display: inline-block;
+    width: 100%;
+}
+#searchBook fieldset{
+    display: block;
+    width: 100%;
+    
+}
+table, thead, tbody, th, td, tr { 
+ display: block; 
+}
+
+
+thead tr { 
+ position: absolute;
+ top: -9999px;
+ left: -9999px;
+}
+
+tr { border: 1px solid #ccc; }
+
+td { 
+
+ border: none;
+ border-bottom: 1px solid #eee; 
+ position: relative;
+ padding-left: 50%; 
+ overflow: hidden;
+}
+
+td:nth-of-type(7) {
+    padding-left: 40%;
+}
+
+td:before { 
+
+ position: absolute;
+
+ top: 6px;
+ left: 6px;
+ width: 30%; 
+ padding-right: 10px; 
+ white-space: nowrap;
+ text-align: left;
+}
+
+td:nth-of-type(1):before { content: "ISBN"; }
+td:nth-of-type(2):before { content: "Book Name"; }
+td:nth-of-type(3):before { content: "Author Name"; }
+td:nth-of-type(4):before { content: "Publisher Name"; }
+td:nth-of-type(5):before { content: "Year"; }
+td:nth-of-type(6):before { content: "Pages"; }
+td:nth-of-type(7):before { content: "Description";}
+td:nth-of-type(8):before { content: "Website"; }
+main{
+    margin-bottom: 100px;
+    
+}
+.form-popup, .form-container {
+    position: relative;
+}
+.form-container{
+    max-width: 100%;
+    top:0;
+    position: inherit;
+}
+}
+
+
+@media only screen 
+   and (max-width : 1200px) {
+   /* Styles here */
+}

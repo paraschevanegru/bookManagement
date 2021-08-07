@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap');
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+.login-form,
+.login-form * {
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro';
+}
+
+.login-form {
+    max-width: 350px;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+.login-form__logo-container {
+    padding: 30px;
+    background: 	#9eaec5;
+}
+
+.login-form__logo {
+    display: block;
+    max-width: 125px;
+    margin: 0 auto;
+}
+
+.login-form__content {
+    padding: 30px;
+    background:  	#c8d2e0;
+}
+
+.login-form__header {
+    margin-bottom: 15px;
+    text-align: center;
+    color:#7987a0;
+}
+
+.login-form__input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #dddddd;
+    background: #ffffff;
+    outline: none;
+    transition: border-color 0.5s;
+}
+
+.login-form__input:focus {
+    border-color:#f4d2cf;
+}
+
+.login-form__input::placeholder {
+    color: #aaaaaa;
+}
+
+.login-form__button {
+    padding: 10px;
+    color: #ffffff;
+    font-weight: bold;
+    background: #7987a0;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form__button:active {
+    background: #9eaec5;
+}
+
+.login-form__links {
+    margin-top: 15px;
+    text-align: center;
+}
+
+@media only screen 
+   and (max-width : 370px) {
+       .login {
+           display: block;
+           width: 100%;
+           height: 100%;
+           margin:0;
+           padding:0;
+       }
+       .login-form{
+           display: block;
+           width: 100%;
+           height: 100%;
+           border-radius: none;
+           margin: 0;
+           padding: 0;
+           max-width: 100%;
+           box-shadow: none;
+       }
+       .login-form__content,.login-form__logo-container{
+           height: 50%;
+       }
+}
+
+@media only screen 
+   and (max-width : 740px), (max-width: 1100px) {
+        .login {
+           display: block;
+           width: 100%;
+           height: 100%;
+           margin:0;
+           padding:0;
+       }
+       .login-form{
+           display: block;
+           width: 100%;
+           height: 100%;
+           border-radius: none;
+           margin: 0;
+           padding: 0;
+           max-width: 100%;
+           box-shadow: none;
+       }
+       .login-form__content{
+        padding: 10px;
+        height: 70%;
+    }
+
+    .login-form__logo-container {
+        padding: 0;
+        height:30%
+    }
+}

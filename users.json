@@ -1,0 +1,14 @@
+[
+    {
+        "name": "para",
+        "age": "21",
+        "password": "buna",
+        "type": "admin"
+    },
+    {
+        "name": "edi",
+        "age": "23",
+        "password": "buna1",
+        "type": "editor"
+    }
+]

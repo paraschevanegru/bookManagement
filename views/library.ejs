@@ -1,0 +1,98 @@
+<header>
+    <img class="logo" src="images/logo_transparent.png" alt="logo" />
+    <nav>
+        <ul class="navbar">
+            <%if (name===undefined) { %>
+                <li><a class="logout logout-button" href="/login">Login</a></li>
+                <% } %>
+        </ul>
+    </nav>
+    <%if (name!==undefined) { %>
+        <a class="logout logout-button" href="/logout">Logout</a>
+        <% } %>
+</header>
+
+<main>
+    <div id="message">
+    </div>
+    <div class="welcome">
+        <%if (name!==undefined) { %>
+            <h1>Welcome, <%=name%>!</h1>
+            <% } %>
+    </div>
+   
+    <div class="field has-addons">
+        <p class="control">
+            <button class="open-button" onclick="openForm('addBook')">Add Book</button>
+        </p>
+        <p class="control">
+            <button class="open-button" onclick="openForm('updateBook')">Update Book</button>
+        </p>
+        <p class="control">
+            <button class="open-button" onclick="clearStore();">Clear Store</button>
+        </p>
+        <p class="control">
+            <button class="open-button" onclick="loadBooks();">Load Books</button>
+        </p>
+      </div>
+        
+    <form id="addBook" action="" class="form-container form-popup" onsubmit="formAddBook(); return false;">
+        <h1>Add Book</h1>
+        <label>ISBN </label> <input pattern="^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$" type="text" id="isbn"
+            name="isbn" />
+        <label>Book Name</label> <input minlength="1" maxlength="200" type="text" id="name" name="name" />
+        <label>Author Name</label> <input minlength="1" maxlength="130" type="text" id="author" name="author" />
+        <label>Publisher Name</label> <input minlength="1" maxlength="50" type="text" id="publisher" name="publisher" />
+        <label>Year </label> <input min="0" type="number" id="year" name="year" />
+        <label>Pages</label> <input min="5" type="number" id="pages" name="pages" />
+        <label>Description</label> <textarea maxlength="500" id="description" name="description"></textarea>
+        <label>Website</label> <input type="url" id="website" name="website" />
+        <button type="submit" class="btn">Add</button>
+        <button type="button" class="btn cancel" onclick="closeForm('addBook')">Close</button>
+    </form>
+
+    <table id="bookList">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Publisher Name</th>
+                <th>Year</th>
+                <th>Pages</th>
+                <th>Description</th>
+                <th>Website</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <form id="updateBook" action="" class="form-container form-popup" onsubmit="formUpdateBook(); return false;">
+        <h1>Update Book</h1>
+        <label>ISBN </label> <input pattern="^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$" type="text" id="isbn"
+            name="isbn" />
+        <label>Book Name</label> <input minlength="1" maxlength="200" type="text" id="name" name="name" />
+        <label>Author Name</label> <input minlength="1" maxlength="130" type="text" id="author" name="author" />
+        <label>Publisher Name</label> <input minlength="1" maxlength="50" type="text" id="publisher" name="publisher" />
+        <label>Year </label> <input min="0" type="number" id="year" name="year" />
+        <label>Pages</label> <input min="5" type="number" id="pages" name="pages" />
+        <label>Description</label> <textarea maxlength="500" id="description" name="description"></textarea>
+        <label>Website</label> <input type="url" id="website" name="website" /><br />
+
+        <button type="submit" class="btn">Update</button>
+        <button type="button" class="btn cancel" onclick="closeForm('updateBook')">Close</button>
+    </form>
+</main>
+
+<div class="footer">
+    &copy;. 2021. Negru Parascheva
+</div>
+
+<script>
+    window.onload = () => {
+        displayBooks();
+    }
+</script>

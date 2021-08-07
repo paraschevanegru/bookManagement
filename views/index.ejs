@@ -1,0 +1,54 @@
+<header>
+    <img class="logo" src="images/logo_transparent.png" alt="logo" />
+    <nav>
+        <ul class="navbar">
+            <%if (name===undefined) { %>
+                <li><a class="logout logout-button" href="/login">Login</a></li>
+                <% } %>
+        </ul>
+
+    </nav>
+    <%if (name!==undefined) { %>
+        <a class="logout logout-button" href="/logout">Logout</a>
+        <% } %>
+</header>
+
+<main>
+    <div id="message">
+    </div>
+    <form id="searchBook" action="" onsubmit="formSearchBook(); return false;">
+        <fieldset>
+            <input class="flex-item" placeholder="Search..." type="text" id="search" name="search" />
+            <select class="flex-item" name="searchType" id="searchType">
+                <option value="isbn">ISBN</option>
+                <option value="name">Book Name</option>
+                <option value="author">Author Name</option>
+                <option value="year">Publish Year</option>
+            </select>
+
+            <button class="flex-item" id="searchButton" type="submit">Search</button>
+        </fieldset>
+    </form>
+
+    <table id="bookList">
+        <thead>
+            <tr>
+                <th>ISBN</th>
+                <th>Book Name</th>
+                <th>Author Name</th>
+                <th>Publisher Name</th>
+                <th>Year</th>
+                <th>Pages</th>
+                <th>Description</th>
+                <th>Website</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</main>
+
+<div class="footer">
+    &copy;. 2021. Negru Parascheva
+</div>
